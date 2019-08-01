@@ -33,6 +33,8 @@ app.post('/register', (req, res) => {register.handleRegister(req, res, db, bcryp
 
 app.get('/profile/:id', (req, res) => {profile.handleProfileGet(req, res, db)});
 
-app.put('/image', (req, res) => {Image.handleImage(req, res, db)})
+app.put('/image', (req, res) => { image.handleImage(req, res, db)})
+
+app.post('/imageURL', (req, res) => { image.handleAPICall(req, res, db)})
 
 app.listen(3000, () => console.log('App is running! listening on port 3000!'))
